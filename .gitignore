@@ -1,2 +1,23 @@
-# Ignore virtual environment
-.venv
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Django
+media/
+staticfiles/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.expo/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
