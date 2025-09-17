@@ -31,6 +31,9 @@ INSTALLED_APPS = [
     'apps.core',
 ]
 
+# Register custom user model
+AUTH_USER_MODEL = 'users.User'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -46,7 +49,7 @@ ROOT_URLCONF = 'Hospify.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],  # optional: keep project-wide templates here
+        'DIRS': [], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -84,7 +87,6 @@ USE_TZ = True
 
 # Static files
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]  # optional, if you keep global static files
 
 # Default PK type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
